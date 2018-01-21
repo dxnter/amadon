@@ -24,7 +24,6 @@ def checkout(request):
         for product_name in product:
             if checkout_product_id == product_name:
                 request.session['product_name'] = product[product_name]
-
     return redirect('/success')
 
 def success(request):
