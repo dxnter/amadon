@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Amadon - Checkout Success!</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> {% load static %}
+    <link rel="icon" href="https://www.amazon.com/favicon.ico">
+    <link rel="stylesheet" href="{% static 'shop/style.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div class="alert alert-success" role="alert">
+                    <h4 class="alert-heading">Thank you for your business!</h4>
+                    <p>You ordered <strong>{{request.session.checkout_quantity}}</strong> {{request.session.product_name}}(s) for a total of ${{request.session.product_price}}</p>
+                    <p>You have ordered {{request.session.products_ordered}} items so far and spent ${{request.session.total_spent}}
+                        with <strong>Amadon</strong></p>
+                    <hr>
+                    <a href="/" class="alert-link">Go back</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
