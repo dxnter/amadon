@@ -1,4 +1,3 @@
-# amadon
 Minimal Django e-commerce website demonstrating session storage of total amount of products and money spent by the user.
 
 Homepage
