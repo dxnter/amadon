@@ -4,5 +4,4 @@ urlpatterns = [
     url(r'^$', views.index),
     url(r'^shop/checkout$', views.checkout),
     url(r'^success$', views.success)
-
 ]
